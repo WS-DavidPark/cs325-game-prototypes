@@ -18,6 +18,7 @@ function preload () {
   game.load.image('ground', 'assets/platform400.png')
   game.load.image('ground2', 'assets/platform200.png')
   game.load.image('ground3', 'assets/platform100.png')
+  game.load.image('groundFall', 'assets/platformFall.png')
   game.load.image('ground4', 'assets/platform32.png')
   game.load.image('diamond', 'assets/diamond.png')
   game.load.image('star', 'assets/star.png')
@@ -55,7 +56,7 @@ function create () {
   ledge = platforms.create(475, 320, 'ground2')
   ledge.body.immovable = true
 
-  ledge = platforms.create(700, 370, 'ground3')
+  ledge = platforms.create(700, 370, 'groundFall')
   ledge.body.immovable = false
 
   ledge = platforms.create(700, 250, 'ground3')
@@ -71,7 +72,7 @@ function create () {
   ledge = platforms.create(75, 100, 'ground3')
   ledge.body.immovable = true
 
-  ledge = platforms.create(75, 260, 'ground3')
+  ledge = platforms.create(75, 260, 'groundFall')
   ledge.body.immovable = false
 
     // The player and its settings
