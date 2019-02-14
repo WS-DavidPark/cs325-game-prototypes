@@ -71,7 +71,7 @@ function create () {
   platforms.enableBody = true
 
     // Here we create the ground.
-  let ground = platforms.create(0, game.world.height - 25, 'ground')
+  let ground = platforms.create(0, game.world.height - 25, 'platform')
 
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
   ground.scale.setTo(35, 1)
@@ -80,8 +80,24 @@ function create () {
   ground.body.immovable = true
 
     //  Now let's create two ledges
-  let ledge = platforms.create(100, 350, 'ground')
+  let ledge = platforms.create(400, 350, 'platform')
   ledge.body.immovable = true
+  let ledge3 = platforms.create(300, 350, 'platform')
+  ledge3.body.immovable = true
+  let ledge4 = platforms.create(500, 350, 'platform')
+  ledge4.body.immovable = true
+  let ledge5 = platforms.create(600, 350, 'platform')
+  ledge5.body.immovable = true
+
+  let ledge2 = platforms.create(100, 200, 'platform')
+  ledge2.body.immovable = true
+  let ledge6 = platforms.create(200, 200, 'platform')
+  ledge6.body.immovable = true
+
+  let ledge7 = platforms.create(700, 200, 'platform')
+  ledge7.body.immovable = true
+  let ledge8 = platforms.create(800, 200, 'platform')
+  ledge8.body.immovable = true
 
  hit = game.add.audio('hit')
     // The player and its settings
