@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Game.js"></script>
+	<script src="js/Ending.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Your game title</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+What is original about your game?
+Created an item sorting game based on the theme "letter is returned"
+</li>
+
+<li><strong>Technical Merit:</strong>
+What is interesting about your game technology? - Incorporated the game states, ability to restart the game on death and procedural generation of mails to create an infinitely playable game.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+What did you learn from this prototype? - Game states, restarting games, making different game modes (dropped for time's sake)
+What was the easiest or hardest part of making it? - The easiest part was adding onto the existing time template, the hardest was getting collision to work, as there was a browser crashing bug initially
+</li>
+
+<li><strong>Prototype Assets:</strong>
+Did you make your prototype assets from scratch? Did you borrow them? Cite your sources here.
+<ul>
+<li>Loading screen: <a href="http://worldartsme.com/postal-truck-clipart.html#gal_post_96797_postal-truck-clipart-1.jpg">Truck Sprite</a></li>
+<li>Mail & Box Sprites: self-made</li>
+<li>Ending Screen: <a href="https://www.ebay.com/itm/Game-Over-Decal-Choose-Size-Color-8-Bit-Funny-Atari-Nintendo-Mario-Bros-/272274481641">Sprite online</a></li>
+<li>Game Music: <a href="https://www.youtube.com/watch?v=mmR33wdEo_M">Nier Automata - Emil's Shop</a></li>
+<li>Menu Music: <a href="https://www.youtube.com/watch?v=FWczGDSwdE8">Nier Automata - Menu Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here. - The game state was from example, otherwise it was a new idea.
+</li>
+
+<li><strong>High Concept:</strong>
+Sort the wrongly sent mail back to the original sender by matching the color of the mail to the color of the mailbox
+</li>
+
+<li><strong>Theme:</strong>
+State which of the Storymatic themes you used.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+Game is controlled by the arrow keys to send the mail to the respectivly placed mailboxes.
+The color, and therefore the destination, is decided randomly everytime a new mail is created after the player scores
+</li>
+
+<li><strong>Prototype Goal:</strong>
+Game states. It contains boot, main menu, game, and end screen and is able to re-start the game with the input from the player.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+A quick action based sorting game.
+</li>
+
+<li><strong>Gameplay:</strong>
+Controls: Arrow Keys
+This game is a sorting game where a player should match the color of the mail with the color of the mailbox by hitting the arrow keys pointing towards the colored mailbox that matches the color of the mail. Players lose health if they hit the wrong arrow keys, and are timed. On the loss of all HP points, players are told how many points they scored in the time played and are allowed to restart if they wish. Originally I wanted to create two different game states with different rules, but could not for times sake.
+</li>
+
+<li><strong>Strategies:</strong>
+How fast to play vs how accurate they want to be
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+There's an infinite amount of wrongly sent mail, please send it back to the correct sender.
+</li>
+
+<li><strong>Target Audience:</strong>
+A single sentence that describes the demographic you're trying to reach. - CS students and TAs.
+</li>
+
+<li><strong>Play Time:</strong>
+Based on skill.
+</li>
+
+</ul>
+</div>
+</body>
+</html>
