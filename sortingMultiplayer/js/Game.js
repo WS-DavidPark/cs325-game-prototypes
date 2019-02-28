@@ -181,7 +181,7 @@ GameStates.makeGame = function( game, shared ) {
                 alert("Player One loses all health points and lost. \nPlayer One scored " + score + " points and player two scored " + scoreTwo + " points")
                 music.stop()
                 game.state.start('Ending')
-            }if(health <= 0){
+            }if(healthTwo <= 0){
                 alert("Player Two loses all health points and lost. \nPlayer One scored " + score + " points and player two scored " + scoreTwo + " points")
                 music.stop()
                 game.state.start('Ending')
