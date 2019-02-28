@@ -184,11 +184,12 @@ GameStates.makeGame = function( game, shared ) {
                     alert("Time's up! Player Two wins with " + scoreTwo + "points vs player one's " + score + " points")
 
                 }else{
-                    alert("Time's up! Players are tied with " + score " points")
+                    alert("Time's up! Players are tied with " + score + " points")
 
                 }
                 music.stop()
                 game.state.start('Ending')
+
 
             }
             if(health <= 0){
