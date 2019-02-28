@@ -103,7 +103,7 @@ GameStates.makeGame = function( game, shared ) {
 
 */
 
-            time = 0
+            time = 60
             health = 5
             healthTwo = 5
             /*
@@ -137,14 +137,14 @@ GameStates.makeGame = function( game, shared ) {
             dRight = game.input.keyboard.addKey(Phaser.Keyboard.D)
             
             //var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-            scoreOneKeeper = game.add.text( 25, 30, "Player One Score: " + score, { fontSize: '16px', fill: '#9999ff' } );
-            scoreTwoKeeper = game.add.text( 600, 30, "Player Two Score: " + scoreTwo, { fontSize: '16px', fill: '#9999ff' } );
-            healthKeeper = game.add.text( 25, 50, "Player One Health: " + health, { fontSize: '16px', fill: '#9999ff' } );
-            healthKeeperTwo = game.add.text( 600, 50, "Player Two Health: " + healthTwo, { fontSize: '16px', fill: '#9999ff' } );
+            scoreOneKeeper = game.add.text( 25, 30, "Player Two Score: " + scoreTwo, { fontSize: '16px', fill: '#9999ff' } );
+            scoreTwoKeeper = game.add.text( 600, 30, "Player One Score: " + scoreOne, { fontSize: '16px', fill: '#9999ff' } );
+            healthKeeper = game.add.text( 25, 50, "Player Two Health: " + healthTwo, { fontSize: '16px', fill: '#9999ff' } );
+            healthKeeperTwo = game.add.text( 600, 50, "Player One Health: " + health, { fontSize: '16px', fill: '#9999ff' } );
             timeKeeper = game.add.text( 25, 10, "Time Elapsed: " + time, { fontSize: '16px', fill: '#9999ff' } );
             mulText = game.add.text( 450, 290, "Multiplier: X" + multiplier, { fontSize: '16px', fill: '#9999ff' } );
             instructions = game.add.text( 25, 500, "Beat the other player in sending the mail to the correct mailbox. \nReach 25 points first without losing health to win", { fontSize: '16px', fill: '#9999ff' } );
-            controlText = game.add.text( 25, 570, "CONTROLS:  Player One: Arrow Keys.        Player Two: WASD", { fontSize: '16px', fill: '#9999ff' } );
+            controlText = game.add.text( 25, 570, "CONTROLS:  Player Two: WASD        Player One: Arrow Keys.", { fontSize: '16px', fill: '#9999ff' } );
             
             timeKeeper.anchor.setTo( 0.0, 0.0 );
             scoreOneKeeper.anchor.setTo( 0.0, 0.0 );
@@ -161,11 +161,11 @@ GameStates.makeGame = function( game, shared ) {
 */
         update: function () {
             //text.setText("Current Score: " + score);
-            scoreOneKeeper.setText("Player One Score: " + score);
-            scoreTwoKeeper.setText("Player Two Score: " + scoreTwo);
+            scoreOneKeeper.setText("Player Two Score: " + scoreTwo);
+            scoreTwoKeeper.setText("Player One Score: " + score);
             timeKeeper.setText("Time Elapsed: " + time);
-            healthKeeper.setText("Player One Health: " + health);
-            healthKeeperTwo.setText("Player One Health: " + healthTwo);
+            healthKeeper.setText("Player Two Health: " + healthTwo);
+            healthKeeperTwo.setText("Player One Health: " + health);
             mulText.setText("Multiplier: X" + multiplier)
 
             //text.setText(direction);
@@ -176,7 +176,21 @@ GameStates.makeGame = function( game, shared ) {
             game.physics.arcade.overlap(mails, westBox, scoreWest, null, this)
             */
             game.physics.arcade.overlap(mail, mailBoxes, scoreKeep, null, this)
+            if(time <= 0){
+                if(score > scoreTwo){
+                    alert("Time's up! Player One wins with " + score + "points vs player two's " + scoreTwo + " points")
 
+                }else if(score < scoreTwo){
+                    alert("Time's up! Player Two wins with " + scoreTwo + "points vs player one's " + score + " points")
+
+                }else{
+                    alert("Time's up! Players are tied with " + score " points")
+
+                }
+                music.stop()
+                game.state.start('Ending')
+
+            }
             if(health <= 0){
                 alert("Player One loses all health points and lost. \nPlayer One scored " + score + " points and player two scored " + scoreTwo + " points")
                 music.stop()
@@ -360,7 +374,7 @@ GameStates.makeGame = function( game, shared ) {
     }
 
     function updateCounter(){
-        time += .1
+        time -= .1
     }
 };
 
