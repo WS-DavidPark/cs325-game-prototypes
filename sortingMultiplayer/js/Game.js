@@ -138,7 +138,7 @@ GameStates.makeGame = function( game, shared ) {
             
             //var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
             scoreOneKeeper = game.add.text( 25, 30, "Player Two Score: " + scoreTwo, { fontSize: '16px', fill: '#9999ff' } );
-            scoreTwoKeeper = game.add.text( 600, 30, "Player One Score: " + scoreOne, { fontSize: '16px', fill: '#9999ff' } );
+            scoreTwoKeeper = game.add.text( 600, 30, "Player One Score: " + score, { fontSize: '16px', fill: '#9999ff' } );
             healthKeeper = game.add.text( 25, 50, "Player Two Health: " + healthTwo, { fontSize: '16px', fill: '#9999ff' } );
             healthKeeperTwo = game.add.text( 600, 50, "Player One Health: " + health, { fontSize: '16px', fill: '#9999ff' } );
             timeKeeper = game.add.text( 25, 10, "Time Elapsed: " + time, { fontSize: '16px', fill: '#9999ff' } );
