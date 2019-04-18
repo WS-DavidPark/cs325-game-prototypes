@@ -200,7 +200,7 @@ GameStates.makeGame = function( game, shared ) {
             pipeBot5.body.velocity.y = lastOffset
 
             music = game.add.audio('gameMusic')
-            music.play()
+            //music.play()
 
             var timer = game.time.create(false);
             timer.loop(100, updateCounter, this);

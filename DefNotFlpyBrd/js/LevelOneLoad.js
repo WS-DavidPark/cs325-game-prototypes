@@ -9,7 +9,7 @@ GameStates.makeMainMenu = function( game, shared ) {
     function startGame() {
 
         //	Ok, the Play Button has been clicked or touched, so let's stop the music (otherwise it'll carry on playing)
-        music.stop();
+        //music.stop();
 
         //	And start the actual game
         game.state.start('LevelOne');
@@ -25,7 +25,7 @@ GameStates.makeMainMenu = function( game, shared ) {
             //	Naturally I expect you to do something significantly better :)
             
             music = game.add.audio('titleMusic');
-            music.play();
+            //music.play();
             spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
             game.add.sprite(0, 0, 'bird');
             playButton = game.input.keyboard.createCursorKeys();
