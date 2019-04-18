@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/LevelOneLoad.js"></script>
+	<script src="js/LevelOne.js"></script>
+	<script src="js/LevelOneEnding.js"></script>
+	<!--<script src="js/LevelTwoLoad.js"></script>
+	<script src="js/LevelTwo.js"></script>
+	<script src="js/LevelTwoEnding.js"></script>-->
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Your game title</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+What is original about your game?
+Based on the popular game flappy bird, it incorporates two levels that each feature different types of obsticles and challenges.
+</li>
+
+<li><strong>Technical Merit:</strong>
+What is interesting about your game technology? - Incorporated the game states, ability to restart the game on death and procedural generation of pipe placement, pipe height, pipe momentum and more to make the game challenging on each play through. 
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+What did you learn from this prototype? - Game states, restarting games, making different game modes (dropped for time's sake) Had trouble expanding the game with additional game states, and the second level could not be triggered without crashing or causing the first level to not be loaded.
+What was the easiest or hardest part of making it? - Making multiple units move in unison and despawning and respawning them in synced motion to a new location for a seamless endless experience.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+Did you make your prototype assets from scratch? Did you borrow them? Cite your sources here.
+<ul>
+<li>Pipe: <a href="http://www.sclance.com/pngs/flappy-bird-pipe-png/download.php?file=./flappy_bird_pipe_png_505966.png">Sprite online</a></li>
+<li>Background and floor self-made</li>
+<li>Flappy Bird: <a href="http://www.sclance.com/pngs/flappy-bird-pipe-png/download.php?file=./flappy_bird_pipe_png_506336.png">Sprite online</a></li>
+<li>Game Music: <a href="https://www.youtube.com/watch?v=mmR33wdEo_M">Nier Automata - Emil's Shop</a></li>
+<li>Menu Music: <a href="https://www.youtube.com/watch?v=FWczGDSwdE8">Nier Automata - Menu Music</a></li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+Flappy Bird.
+</li>
+
+<li><strong>High Concept:</strong>
+Use spacebar to move away from pipes and try to go as long as possible
+</li>
+
+<li><strong>Theme:</strong>
+State which of the Storymatic themes you used.
+</li>
+
+<li><strong>Mandated Variety:</strong>
+Game is controlled by a simple space bar gesture that makes the bird jump
+Make the correct decision on when to or not to jump and dodge the pipes as long as possible
+</li>
+
+<li><strong>Prototype Goal:</strong>
+Emulate the genuine flappy bird feel as well as create an endless proceduraly generated game that can be played forever. Incorporate multiple levels
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+A quick reaction based arcade game
+</li>
+
+<li><strong>Gameplay:</strong>
+Controls: Space key
+The player dodges incoming pipes that move up and down by using their space bar to jump.
+
+Multiple levels provide different challenges.
+</li>
+
+<li><strong>Strategies:</strong>
+How close they want to cut it to dodge the pipes for a easier run to the next pipe.
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+Help a bird navigate the forest of pipes
+</li>
+
+<li><strong>Target Audience:</strong>
+Arcade & casual players
+</li>
+
+<li><strong>Play Time:</strong>
+Based on skill, minute per level
+</li>
+
+</ul>
+</div>
+</body>
+</html>
